@@ -104,6 +104,8 @@ describe ('OrangeHRM login page test', () => {
     cy.get('button[type="submit"]').click()
     cy.url().should('contain', '/dashboard');
   })
+
+  //Verify Forgot your password? button hyperlink
     it('LP-12 Forgot your password? button hyperlink', () => {
     cy.visit('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login')
     cy.get('.orangehrm-login-forgot-header').should('be.visible').click()
