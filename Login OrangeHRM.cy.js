@@ -24,8 +24,8 @@ describe ('OrangeHRM login page test', () => {
     cy.get('.orangehrm-login-logo').should('be.visible');
   })
 
-  //Verify mandatory field validation in the Login page  
-  it('LP-05 Verify mandatory field validation in the Login page', () => {
+  //Verify mandatory field validation in the login page  
+  it('LP-05 Verify mandatory field validation in the login page', () => {
     cy.get('input[name="username"]').should('be.visible').clear()
     cy.get('input[name="password"]').should('be.visible').clear()
     cy.get('button[type="submit"]').click();
