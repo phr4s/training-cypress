@@ -11,7 +11,7 @@ describe ('OrangeHRM login page test', () => {
 
   //Verify favicon logo
   it('LP-02 Verify favicon logo', () => {
-    cy.get('link[rel="icon"]').should('have.attr', 'href').and('include', 'favicon.ico');
+    cy.get('link[rel="icon"]').should('have.attr', 'href').and('contain', 'favicon.ico');
   })
   
   //Verify OrangeHRM branding
