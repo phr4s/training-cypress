@@ -4,7 +4,7 @@ describe ('OrangeHRM login page test', () => {
     cy.visit('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login');
   })
 
-  // Verify the url of the OrangeHRM login page
+  //Verify the url of the OrangeHRM login page
   it('LP-01 Verify the url of the OrangeHRM login page', () => {
     cy.url().should('contain', '/auth/login');
   })
