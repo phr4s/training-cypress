@@ -71,7 +71,6 @@ describe ('OrangeHRM login page test', () => {
 
   //Verify login using non-registered account
   it('LP-08 Verify login using non-registered account ', () => {
-    cy.visit('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login')
     cy.get('input[name="username"]').should('be.visible').type('AIUEO')
     cy.get('input[name="password"]').should('be.visible').type('pasword123')
     cy.get('button[type="submit"]').click();
@@ -80,7 +79,6 @@ describe ('OrangeHRM login page test', () => {
 
   //Verify login using registered account but wrong password
   it('LP-09 Verify login using registered account but wrong password', () => {
-    cy.visit('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login')
     cy.get('input[name="username"]').should('be.visible').type('Admin')
     cy.get('input[name="password"]').should('be.visible').type('wrongpassword')
     cy.get('button[type="submit"]').click();
@@ -89,7 +87,6 @@ describe ('OrangeHRM login page test', () => {
 
   //Verify login using non-registered account and correct password
   it('LP-10 Verify login using non-registered account and correct password', () => {
-    cy.visit('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login')
     cy.get('input[name="username"]').should('be.visible').type('AIUEO')
     cy.get('input[name="password"]').should('be.visible').type('admin123')
     cy.get('button[type="submit"]').click();
@@ -98,7 +95,6 @@ describe ('OrangeHRM login page test', () => {
 
   //Verify login using registered account and password
   it('LP-11 Verify login using registered account and password', () => {
-    cy.visit('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login')
     cy.get('input[name="username"]').should('be.visible').type('Admin')
     cy.get('input[name="password"]').should('be.visible').type('admin123')
     cy.get('button[type="submit"]').click()
@@ -107,7 +103,6 @@ describe ('OrangeHRM login page test', () => {
 
   //Verify Forgot your password? button hyperlink
     it('LP-12 Verify Forgot your password? button hyperlink', () => {
-    cy.visit('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login')
     cy.get('.orangehrm-login-forgot-header').should('be.visible').click()
     cy.url().should('contain', '/requestPassword');
   })
